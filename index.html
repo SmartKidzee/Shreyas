@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas' Tech Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="qualifications.html">Qualifications</a></li>
+                <li><a href="hobbies.html">Hobbies & Interests</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to Shreyas' Tech Hub</h1>
+            <p>Your one-stop destination for tech insights and updates.</p>
+            <h2 id="dynamic-text">I am a <span class="dynamic-text"></span></h2>
+            <img src="images/your-photo.jpg" alt="Your Photo" class="profile-photo">
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shreyas. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/channel/UCERITddddkoHNg6VW32w9gg" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
+                <a href="https://www.instagram.com/smartkidzee/" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+                <a href="https://x.com/KidzeeSmart" target="_blank"><img src="icons/x.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const roles = ["Student", "Youtuber", "Tech Enthusiast"];
+        let roleIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        function updateText() {
+            const currentRole = roles[roleIndex];
+            const displayText = deleting ? currentRole.substring(0, charIndex--) : currentRole.substring(0, charIndex++);
+
+            $(".dynamic-text").text(displayText);
+
+            if (!deleting && charIndex === currentRole.length) {
+                setTimeout(() => deleting = true, 1000);
+            } else if (deleting && charIndex === 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+
+            setTimeout(updateText, deleting ? 100 : 200);
+        }
+
+        $(document).ready(function() {
+            $(".profile-photo").fadeIn(300);
+            updateText();
+        });
+    </script>
+</body>
+</html>
