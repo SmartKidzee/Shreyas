@@ -1,21 +1,33 @@
+/* General Body and Container Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    color: #333;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+}
+
+/* Header and Navigation Styling */
 header {
     background-color: #000;
     color: #fff;
     padding: 10px 0;
+    text-align: center;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 nav ul li {
@@ -33,11 +45,13 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Hero Section Styling */
 .hero {
     background-color: #000;
     color: #fff;
     padding: 50px 0;
     text-align: center;
+    position: relative;
 }
 
 .hero h1 {
@@ -56,11 +70,21 @@ nav ul li a:hover {
     color: #aaa;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+/* Profile Photo Styling */
+.profile-photo {
+    width: 200px;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
+.profile-photo:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Section Styling */
 .content {
     padding: 50px 0;
 }
@@ -83,189 +107,6 @@ nav ul li a:hover {
 
 .content ul li {
     margin-bottom: 10px;
-}
-
-footer {
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer .social-icons {
-    margin-top: 10px;
-}
-
-footer .social-icons a {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-footer .social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
-/* Contact form styles */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-form label {
-    font-weight: bold;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-form button {
-    background-color: #000;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-form button:hover {
-    background-color: #333;
-}
-
-/* Blog post image styles */
-article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    position: relative;
-}
-
-.profile-photo {
-    width: 150px;
-    border-radius: 50%;
-    display: none;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer .social-icons {
-    margin: 10px 0;
-}
-
-footer .social-icons a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .social-icons img {
-    width: 30px;
-    height: 30px;
-}
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-    header nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .profile-photo {
-        position: static;
-        margin-top: 20px;
-        transform: translateY(0);
-    }
-
-    .hero {
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 20px 10px;
-    }
-
-    .profile-photo {
-        width: 100px;
-        margin: 20px auto;
-    }
-
-    header nav ul li {
-        margin: 5px 0;
-    }
-
-    header nav ul {
-        padding: 0 10px;
-    }
-
-    footer .social-icons a {
-        margin: 0 5px;
-    }
-
-    footer .social-icons img {
-        width: 25px;
-        height: 25px;
-    }
-}
-/* General Container Styling */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    padding: 20px;
 }
 
 /* Blog Summary Styling */
@@ -317,6 +158,74 @@ footer .social-icons img {
     margin: 10px 0;
 }
 
+/* Footer Styling */
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .social-icons {
+    margin-top: 10px;
+}
+
+footer .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #333;
+}
+
+/* Blog Post Image Styles */
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 /* Detailed Blog Post Styling */
 .content img {
     width: 100%;
@@ -334,18 +243,64 @@ footer .social-icons img {
     margin: 10px 0;
 }
 
-/* Add responsiveness for mobile devices */
-@media (max-width: 600px) {
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 20px 0;
+    }
+
+    .profile-photo {
+        width: 150px;
+        margin-top: 20px;
+        position: static;
+        transform: translateY(0);
+    }
+
     .container {
         width: 100%;
         padding: 0 10px;
     }
-    .blog-summary, .blog-card {
+
+    .blog-summary,
+    .blog-card {
         width: 100%;
         margin: 10px 0;
     }
+
     .blog-card {
         padding: 15px;
     }
 }
 
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px 10px;
+    }
+
+    .profile-photo {
+        width: 100px;
+        margin: 20px auto;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    header nav ul {
+        padding: 0 10px;
+    }
+
+    footer .social-icons a {
+        margin: 0 5px;
+    }
+
+    footer .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}
