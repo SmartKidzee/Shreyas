@@ -259,13 +259,13 @@ footer .social-icons img {
         height: 25px;
     }
 }
-/* Add this to styles.css */
-
 /* General Container Styling */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Blog Summary Styling */
@@ -288,6 +288,7 @@ footer .social-icons img {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out;
     background-color: #fff;
+    margin-bottom: 20px;
 }
 
 .blog-card:hover {
@@ -316,13 +317,30 @@ footer .social-icons img {
     margin: 10px 0;
 }
 
+/* Detailed Blog Post Styling */
+.content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.content ul {
+    padding-left: 20px;
+}
+
+.content ul li {
+    margin: 10px 0;
+}
+
 /* Add responsiveness for mobile devices */
 @media (max-width: 600px) {
     .container {
         width: 100%;
         padding: 0 10px;
     }
-    .blog-summary {
+    .blog-summary, .blog-card {
         width: 100%;
         margin: 10px 0;
     }
@@ -330,3 +348,4 @@ footer .social-icons img {
         padding: 15px;
     }
 }
+
