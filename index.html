@@ -20,14 +20,27 @@
             </ul>
         </nav>
     </header>
+
     <section class="hero">
         <div class="container">
             <h1>Welcome to Shreyas' Tech Hub</h1>
             <p>Your one-stop destination for tech insights and updates.</p>
             <h2 id="dynamic-text">I am a <span class="dynamic-text"></span></h2>
-            <img src="images/your-photo.jpg" alt="Your Photo" class="profile-photo">
+
+            <!-- Profile image and LinkedIn badge side by side -->
+            <div class="profile-and-linkedin">
+                <img src="images/your_picture.jpg" alt="Your Photo" class="profile-photo">
+                
+                <!-- LinkedIn badge -->
+                <div class="linkedin-badge">
+                    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="smartshreyas" data-version="v1">
+                        <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/smartshreyas?trk=profile-badge">Shreyas Shreyas</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Shreyas. All rights reserved.</p>
@@ -38,6 +51,7 @@
             </div>
         </div>
     </footer>
+
     <script>
         const roles = ["Student", "Youtuber", "Tech Enthusiast"];
         let roleIndex = 0;
